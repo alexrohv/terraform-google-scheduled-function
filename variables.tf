@@ -191,3 +191,13 @@ variable "grant_token_creator" {
   description = "Specify true if you want to add token creator role to the default Pub/Sub SA"
   default     = false
 }
+
+variable "docker_registry" {
+  type = string
+  default = null
+}
+
+variable "docker_repository" {
+  type = string
+  default = null
+}
