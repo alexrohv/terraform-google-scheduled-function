@@ -116,6 +116,12 @@ variable "function_max_instances" {
   description = "The maximum number of parallel executions of the function."
 }
 
+variable "secret_environment_variables" {
+  type        = list(map(string))
+  default     = []
+  description = "A list of maps which contains key, project_id, secret_name (not the full secret id) and version to assign to the function as a set of secret environment variables."
+}
+
 variable "ingress_settings" {
   type        = string
   default     = "ALLOW_ALL"
